@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent, FooterComponent } from './layout';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { NgMaterialModule } from './material/material.module';
 
 
 @NgModule({
   declarations: [FooterComponent, HeaderComponent],
   imports: [
-    MatButtonModule,
-    MatToolbarModule,
+    NgMaterialModule,
     RouterModule
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NgMaterialModule
   ]
 })
 export class SharedModule { }
